@@ -7,13 +7,25 @@
     <style>
 
 @font-face {
+    font-family: "Lyon Text Web Semibold"; 
+     src: url("//db.onlinewebfonts.com/t/9ea82c5b601a7f912cb586a1a5569616.ttf") format("truetype");
+}
+@font-face{
      font-family: "Lyon Text Web Regular No. 2"; 
      src: url("//db.onlinewebfonts.com/t/1f057276062d65aec27b8a325d5fb3bd.ttf") format("truetype"); 
+}
+
+ .title {
+     font-family: "Lyon Text Web Semibold", Arial; 
+     font-size: 1.2rem;
+ }
+ 
+ .time {
+     font-family: "Lyon Text Web Regular No. 2", Arial; 
+     font-size: 0.8rem;
  }
 
  div {
-   font-family: 'Lyon Text Web Regular No. 2';
-   font-size: 0.8rem;
    display: inline-block;
    text-align: center;
    border-radius: 5px;
@@ -23,7 +35,8 @@
      </style>
 </head>
 </body>
-<div id="demo"></div>
+<div class = "title">trapeze</div>
+<div id="trapeze" class = "time"></div>
 
  <script>
  // Set the date we're counting down to
@@ -41,7 +54,7 @@
   var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
   var seconds = Math.floor((distance % (1000 * 60)) / 1000);
   // Display the result in the element with id="demo"
-  document.getElementById("demo").innerHTML = days + " d " + hours + " h "
+  document.getElementById("trapeze").innerHTML = days + " d " + hours + " h "
   + minutes + " m " + seconds + " s ";
   // If the count down is finished, write some text 
   if (distance < 0) {
